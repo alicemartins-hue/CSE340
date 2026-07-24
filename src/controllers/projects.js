@@ -30,4 +30,4 @@ export async function showProjectDetailsPage(req, res) {
 
 }
 
-export { showProjectsPage, showProjectDetailsPage };
+export { showProjectsPage };
