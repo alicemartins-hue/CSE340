@@ -22,10 +22,12 @@ export async function showProjectDetailsPage(req, res) {
     const id = req.params.id;
 
     const project = await getProjectDetails(id);
-
+    const categories = await getCategoriesByProjectId(id);
+    
     res.render("project", {
         title: project.title,
-        project
+        project,
+        categories
     });
 
 }
