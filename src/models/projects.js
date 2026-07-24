@@ -83,4 +83,4 @@ export async function getProjectDetails(id) {
     return result.rows[0];
 }
 
-export { getAllProjects, getProjectsByOrganizationId, getUpcomingProjects, getProjectDetails };
+export { getAllProjects, getProjectsByOrganizationId};
