@@ -18,7 +18,9 @@ console.log("DB_URL starts with:", process.env.DB_URL?.substring(0, 20));
 
 const pool = new Pool({
     connectionString: process.env.DB_URL,
-    ssl: true
+    ssl: {
+        rejectUnauthorized: false,
+    },
 });
 
 /**
