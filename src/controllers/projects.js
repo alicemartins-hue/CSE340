@@ -1,8 +1,10 @@
-import { getAllProjects } from '../models/projects.js';
 import {
+    getAllProjects,
     getUpcomingProjects,
-    getProjectDetails
+    getProjectDetails,    
 } from "../models/projects.js";
+import { getCategoriesByProjectId } from "../models/categories.js";
+
 
 
 const NUMBER_OF_UPCOMING_PROJECTS = 5;
