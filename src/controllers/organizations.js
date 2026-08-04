@@ -102,7 +102,7 @@ const processEditOrganizationForm = async (req, res) => {
 
     req.flash("success", "Organization updated successfully!");
 
-    res.redirect(`/organization/${organizationId}`);
+    res.redirect(`/organizations/${organizationId}`);
 };
 
 export { showOrganizationsPage, showOrganizationDetailsPage, showNewOrganizationForm, processNewOrganizationForm, organizationValidation, showEditOrganizationForm, processEditOrganizationForm };

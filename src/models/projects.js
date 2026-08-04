@@ -91,6 +91,14 @@ const createProject = async (title, description, location, project_date, organiz
     `;
 
     const queryParams = [title, description, location, project_date, organizationId];
+    console.log("queryParams:", queryParams);
+    console.log({
+        title,
+        description,
+        location,
+        project_date,
+        organizationId
+    });
     const result = await db.query(query, queryParams);
 
     if (result.rows.length === 0) {

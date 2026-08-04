@@ -13,7 +13,7 @@ import { processNewOrganizationForm } from './controllers/organizations.js';
 import { organizationValidation } from './controllers/organizations.js';
 import { showEditOrganizationForm } from './controllers/organizations.js';
 import { processEditOrganizationForm } from './controllers/organizations.js';
-import { showNewProjectForm, processNewProjectForm } from './controllers/projects.js';
+import { showNewProjectForm, processNewProjectForm, projectValidation } from './controllers/projects.js';
 const router = express.Router();
 
 router.get('/', showHomePage);
@@ -25,7 +25,7 @@ router.post('/edit-organization/:id', organizationValidation, processEditOrganiz
 router.get('/projects', showProjectsPage);
 router.get('/categories', showCategoriesPage);
 router.get('/new-project', showNewProjectForm);
-router.post('/new-project', processNewProjectForm);
+router.post('/new-project', projectValidation, processNewProjectForm);
 
 
 router.get('/test-error', testErrorPage);
