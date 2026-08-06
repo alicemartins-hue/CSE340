@@ -19,7 +19,8 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 
-
+console.log("SESSION_SECRET exists:", Boolean(process.env.SESSION_SECRET));
+console.log("SESSION_SECRET value:", process.env.SESSION_SECRET);
 
 /**
   * Configure Express middleware
