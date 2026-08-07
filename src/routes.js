@@ -35,6 +35,7 @@ import {
 } from './controllers/categories.js';
 
 import { testErrorPage } from './controllers/errors.js';
+import { showUserRegistrationForm, processUserRegistrationForm } from './controllers/users.js';
 const router = express.Router();
 
 router.get('/', showHomePage);
@@ -61,5 +62,9 @@ router.get('/test-error', testErrorPage);
 router.get('/organizations/:id', showOrganizationDetailsPage);
 router.get("/project/:id", showProjectDetailsPage);
 router.get("/category/:id", showCategoryDetailsPage);
+
+
+router.get('/register', showUserRegistrationForm);
+router.post('/register', processUserRegistrationForm);
 
 export default router;
