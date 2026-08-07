@@ -308,3 +308,62 @@ a:hover {
     background-color: #d1ecf1;
     border-color: #bee5eb;
 }
+
+
+.form-group {
+    margin: 20px 0;
+}
+
+.category-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.category-option:hover {
+    background: #f2f2f2;
+}
+
+.category-option input {
+    width: 18px;
+    height: 18px;
+}
+
+.category-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.category-option input {
+    margin: 0;
+}
+
+.category-option label {
+    margin: 0;
+}
+
+.category-list {
+    margin-bottom: 25px;
+}
+
+.category-tag {
+    display: inline-block;
+    margin: 5px 8px 5px 0;
+    padding: 6px 12px;
+    background-color: #e8feed;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.project-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}

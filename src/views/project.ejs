@@ -11,19 +11,19 @@
         </p>
 
         <p>
-            Date:
-            <%= new Date(project.project_date).toLocaleDateString('en-US', { year: 'numeric' , month: 'long' ,
-                day: 'numeric' }) %>
+            <strong>Date:</strong>
+            <%= new Date(project.project_date).toLocaleDateString('en-US', { year: 'numeric' , month: 'long' , day: 'numeric' })
+                %>
         </p>
-
+        
         <p>
-            Location:
+            <strong>Location:</strong>
             <%= project.location %>
         </p>
-
+        
         <p>
-            Organization:
-            <a href="/organization/<%= project.organization_id %>">
+            <strong>Organization:</strong>
+            <a href="/organizations/<%= project.organization_id %>">
                 <%= project.organization_name %>
             </a>
         </p>
@@ -32,20 +32,21 @@
         <!-- CATEGORIES GO HERE -->
 
         <h2>Categories</h2>
-
-        <div>
+        
+        <div class="category-list">
             <% categories.forEach(category=> { %>
-
-                <a href="/category/<%= category.category_id %>">
+                <a class="category-tag" href="/category/<%= category.category_id %>">
                     <%= category.name %>
                 </a>
-
                 <% }) %>
         </div>
-
-        <a href="/edit-project/<%= project.project_id %>">
-            Edit Project
-        </a>
+        
+        <h2>Actions</h2>
+        
+        <div class="project-actions">
+            <a href="/edit-project/<%= project.project_id %>">Edit Project</a>
+            <a href="/assign-categories/<%= project.project_id %>">Assign Categories</a>
+        </div>
     </main>
 
     <%- include('partials/footer') %>
