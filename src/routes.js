@@ -37,6 +37,7 @@ import {
 import { testErrorPage } from './controllers/errors.js';
 import { showUserRegistrationForm, processUserRegistrationForm } from './controllers/users.js';
 import { processLoginForm, showLoginForm, processLogout } from './controllers/users.js';
+import { requireLogin, showDashboard } from "./controllers/users.js";
 
 const router = express.Router();
 
@@ -72,5 +73,7 @@ router.post('/register', processUserRegistrationForm);
 router.get('/login', showLoginForm);
 router.post('/login', processLoginForm);
 router.get('/logout', processLogout);
+
+router.get("/dashboard", requireLogin, showDashboard);
 
 export default router;
